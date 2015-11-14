@@ -12,24 +12,14 @@
 
 .soti {
   width: 300px;
-  height: 300px;
   video {
     width: 100%;
   }
 }
 
-.topBtn {
+.prevLink {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 40px;
-  margin-left: -20px;
-  text-align: center;
-}
-
-.bottomBtn {
-  position: absolute;
-  bottom: 0;
   left: 50%;
   width: 40px;
   margin-left: -20px;
@@ -42,8 +32,17 @@
   left: 50%;
   margin-left: -75px;
   width: 150px;
-  margin: 0 auto;
   img {
     width: 100%;
   }
 }
+
+.nextLink {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  margin-left: -20px;
+  text-align: center;
+}
+
