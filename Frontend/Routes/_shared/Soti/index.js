@@ -6,7 +6,7 @@ export default React.createClass({
   render() {
     const source = require(`videos/${this.props.soti.file}`)
     return (
-      <video loop={true} autoPlay={true}>
+      <video loop={true} autoPlay={false}>
         <source src={source} type="video/mp4" />
       </video>
     )

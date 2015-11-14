@@ -11,13 +11,15 @@ export default React.createClass({
     const soti = this.props.route.soti
 		return (
 			<div className={style.root}>
-        <div className={style.logo}>
+        <div className={style.topBtn}>
           {this.renderTopLink(soti)}
         </div>
         <div className={style.soti}>
   				<Soti key={soti.id} soti={soti} />
         </div>
-        {this.renderBottomLink(soti)}
+        <div className={style.bottomBtn}>
+          {this.renderBottomLink(soti)}
+        </div>
 			</div>
 		)
 	},
@@ -26,15 +28,17 @@ export default React.createClass({
     switch(soti.id) {
       case '1':
         return (
-          <img src={sotiLogo} />
+          <div className={style.logo}>
+            <img src={sotiLogo} />
+          </div>
         )
       case '2':
         return (
-          <Link to='/'>Previous Soti</Link>
+          <Link to='/'>prev</Link>
         )
       default:
         return (
-          <Link to={`/${+soti.id - 1}`}>Previous Soti</Link>
+          <Link to={`/${+soti.id - 1}`}>prev</Link>
         )
     }
   },
@@ -42,7 +46,7 @@ export default React.createClass({
   renderBottomLink(soti) {
     const lastSoti = sotiData[sotiData.length - 1].id
     return (lastSoti === soti.id) ? null : (
-      <Link to={`/${+soti.id + 1}`}>Next Soti</Link>
+      <Link to={`/${+soti.id + 1}`}>next</Link>
     )
   }
 })

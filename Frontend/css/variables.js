@@ -35,8 +35,8 @@ vars['daves_red'] = '#F6694C'
 vars['daves_orange'] = '#F6A83D'
 
 // abstract colours
-vars['foreground'] = vars['dark_grey']
-vars['background'] = 'white'
+vars['foreground'] = 'white'
+vars['background'] = 'black'
 vars['focus_color'] = vars['blue']
 vars['alert_color'] = vars['daves_orange']
 vars['error_color'] = vars['daves_orange']
