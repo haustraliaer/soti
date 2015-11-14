@@ -17,7 +17,6 @@ export default React.createClass({
 	render() {
 		return (
 			<div className={style.root}>
-				<img src={soti} />
 				{this.props.children}
 			</div>
 		)
