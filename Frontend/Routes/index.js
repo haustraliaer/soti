@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import RootContainer from './RootContainer'
-import SotiScreen from 'SotiScreen'
+import SotiScreen from './SotiScreen'
 import sotiData from '_data/sotis'
 
 const firstSoti = sotiData[0]

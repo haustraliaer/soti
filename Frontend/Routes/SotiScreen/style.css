@@ -1,7 +1,7 @@
 .root {
   position: absolute;
   top: 40px;
-  bottom: 40px;
+  bottom: 4w0px;
   left: 0;
   right: 0;
 
@@ -17,6 +17,31 @@
   }
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  img {
+    width: 100%;
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+    .icon {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
 .prevLink {
   position: absolute;
   top: 0;
@@ -26,14 +51,14 @@
   text-align: center;
 }
 
-.logo {
+.icon {
+  @mixin icon 20px, 20px, block;
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -75px;
-  width: 150px;
-  img {
-    width: 100%;
+  margin-left: -10px;
+  path {
+    fill: color(white a(0.5));
   }
 }
 

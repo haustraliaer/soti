@@ -7,10 +7,9 @@ export default function(hostname, initialHTML, initialState) {
         <title>soti</title>
         <link rel="stylesheet" href="${hostname}/build/style.css">
         <link rel="icon" href="${hostname}/favicon.png" type="image/x-icon" />
-        <link rel="icon" href="${hostname}/test.png" type="image/x-icon" />
       </head>
       <body>
-        <div id="react-view">${initialHTML}</div>
+        <div id="react-view"></div>
         <script>window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};</script>
         <script type="application/javascript" src="${hostname}/build/bundle.js"></script>
       </body>
