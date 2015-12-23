@@ -9,7 +9,9 @@ import { History, Link } from 'react-router'
 import Icon from 'Icon'
 import Soti from 'Soti'
 
-hotkey.activate('keydown');
+if(__CLIENT__) {
+  hotkey.activate('keydown');
+}
 
 export default React.createClass({
 
