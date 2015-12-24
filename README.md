@@ -1,5 +1,6 @@
 ﻿# sotiiiiii
 
+GPLv3 (get rekt)
 
 `npm iiiiii`
 
