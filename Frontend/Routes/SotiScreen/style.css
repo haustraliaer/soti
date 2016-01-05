@@ -28,6 +28,18 @@
   }
 }
 
+.gridBtn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 40px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .button {
   background: none;
   border: none;

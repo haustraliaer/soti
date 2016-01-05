@@ -1,0 +1,42 @@
+.root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: color(black a(0.9));
+}
+
+.closeBtn {
+  z-index: 9001;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sotiGrid {
+  @mixin scrollbox;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+
+.sotiBtn {
+  display: block;
+  background: none;
+  border: none;
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+  img, video {
+    width: 100%;
+  }
+}

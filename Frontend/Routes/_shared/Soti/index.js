@@ -1,6 +1,5 @@
 import style from './style.css'
 import React from 'react'
-import sotiPoster from 'img/sotiPoster.png'
 import ui from 'popmotion'
 
 export default React.createClass({
@@ -33,10 +32,11 @@ export default React.createClass({
   },
 
   render() {
-    const source = require(`videos/${this.props.soti.file}`)
+    const video = require(`videos/${this.props.soti.filekey}.mp4`)
+    const poster = require(`img/poster__${this.props.soti.filekey}.png`)
     return (
-      <video ref='soti' loop={true} autoPlay={true} poster={sotiPoster}>
-        <source src={source} type="video/mp4" />
+      <video ref='soti' loop={true} autoPlay={true} poster={poster}>
+        <source src={video} type="video/mp4" />
       </video>
     )
   }

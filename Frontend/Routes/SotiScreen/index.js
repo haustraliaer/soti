@@ -9,6 +9,10 @@ import { History, Link } from 'react-router'
 import Icon from 'Icon'
 import Soti from 'Soti'
 
+import Grid from './Grid'
+
+import Portal from 'Portal'
+
 if(__CLIENT__) {
   hotkey.activate('keydown');
 }
@@ -23,7 +27,8 @@ export default React.createClass({
   getInitialState() {
     return {
       fade: true,
-      goingDown: false
+      goingDown: false,
+      gridOpen: false
     }
   },
 
@@ -42,10 +47,35 @@ export default React.createClass({
     }
   },
 
+  handleGridLink(id) {
+    this.setState({
+      gridOpen: false
+    }, () => this.history.pushState(null, (+id === 1) ? '/' : `/${+id}`))
+  },
+
+  toggleGrid() {
+    this.setState({
+      gridOpen: !this.state.gridOpen
+    })
+  },
+
 	render() {
     const soti = this.props.route.soti
 		return (
 			<div className={style.root}>
+
+        <button className={style.gridBtn} onClick={this.toggleGrid}>grid</button>
+
+        <Portal
+          isOpen={this.state.gridOpen}>
+
+            <Grid
+              history={this.props.history}
+              toggleGrid={this.toggleGrid}
+              onGridLink={this.handleGridLink} />
+
+        </Portal>
+
         <div className={style.prevLink}>
           {this.renderPrevLink(soti)}
         </div>
